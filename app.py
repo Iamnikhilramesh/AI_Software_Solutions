@@ -70,10 +70,14 @@ def get_in_touch():
 
     This message is sent from Website""" + "Name : " + name + ", email : "+ email + ", Required Service :" + service + ", Message : " + message
     if st.button('Submit'):
-        context = ssl.create_default_context()
-        with smtplib.SMTP_SSL(smtp_server, port, context=context) as server:
-            server.login(sender_email, password)
-            server.sendmail(sender_email, receiver_email, message)
+        try:
+            context = ssl.create_default_context()
+            with smtplib.SMTP_SSL(smtp_server, port, context=context) as server:
+                server.login(sender_email, password)
+                server.sendmail(sender_email, receiver_email, message)
+            st.success("Thank you for your request, Will get back to you soon")
+        except Exception as e:
+            print(e)
 
 #Function to display about me
 def about_me():
