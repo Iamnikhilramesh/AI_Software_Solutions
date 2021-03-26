@@ -47,7 +47,6 @@ def home():
     st.header("Home")
 #Function to display projects
 def projects():
-    st.header("Read About Projects")
     my_expander_p = st.beta_expander("Some of the Projects I have worked with", expanded=True)
     with my_expander_p: 
         st.image("leaf.jpeg",caption="Leaf Feature Extraction (2017)")
@@ -86,7 +85,7 @@ def about_me():
     my_expander3 = st.beta_expander("A few words about me", expanded=True)
     with my_expander3:
         st.markdown("""## _ __ I’m Nikhil Ramesh, a multidisciplinary thinker who focuses on telling my clients’ stories with statistics, through enjoyable and meaningful experiences. I specialize in Machine learning algorithms, Data Pipelines and Data visualization tools. __ _""")
-        st.markdown("""### _ Over the past 4 years I have been working with companies and startups around the world as a developer and Data Scientist, working solo and leading small smart application. In my spare time I enjoy travelling and adventures. _ """)
+        st.markdown("""### _ Over the past 4 years I have been working with companies and startups around the world as a developer and Data Scientist, working solo and leading small smart application. _ """)
     my_expander = st.beta_expander("Some of the Clients I have worked with", expanded=True)
     with my_expander:
         st.image("agile.png", caption="Agile Health")

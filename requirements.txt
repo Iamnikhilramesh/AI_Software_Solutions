@@ -1,3 +1,7 @@
+smtplib
+streamlit
+ssl
+numpy
 absl-py==0.11.0
 alabaster==0.7.12
 altair==4.1.0
