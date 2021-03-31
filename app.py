@@ -63,19 +63,26 @@ def mail():
 
 #Function to display home page
 def home():
-    st.header("Home")
-
-    mission = st.beta_expander("Our Mission and Goal ", expanded=True)
-    with mission:
-        st.text("Our Mission and Goal")
+    st.markdown(""" ## Our Mission and Goal
+    #### _ Passionate team who are ready to take up any challenging task and complete on time _
+    """)
+    st.markdown(""" ## Our Core Values
+    #### _ Passion, Commitment, Positivity, Honesty and Growth _
+    """)
+    st.markdown(""" ## Our Core Principles
+    #### _ As we follow a agile workflow, our core principles are Individuals and interactions, Working software, Customer collaboration and Responding to change. _
+    """)
+    # mission = st.beta_expander("Our Mission and Goal ", expanded=True)
+    # with mission:
+    #     st.text("Our Mission and Goal")
     
-    values = st.beta_expander("Core Values ", expanded=True)
-    with values:
-        st.text("Core Values")
+    # values = st.beta_expander("Core Values ", expanded=True)
+    # with values:
+    #     st.text("Core Values")
     
-    principles = st.beta_expander("Core Principles ", expanded=True)
-    with principles:
-        st.text("Core Principles")
+    # principles = st.beta_expander("Core Principles ", expanded=True)
+    # with principles:
+    #     st.text("Core Principles")
     
     my_expander = st.beta_expander("Some of the Clients I have worked with", expanded=True)
     with my_expander:
@@ -99,7 +106,7 @@ def home():
         st.image("photo.jpeg",width=140)
         st.markdown("""#### [Linkedin](https://www.linkedin.com/in/nikhil-ramesh-5125b7139/) [Github](https://github.com/Iamnikhilramesh) """)
     
-    my_expander_p = st.beta_expander("Some of the Projects I have worked with", expanded=True)
+    my_expander_p = st.beta_expander("Some of the Projects I have worked with", expanded=False)
     with my_expander_p:
         a,b = st.beta_columns(2)
         a.image("leaf.jpeg",caption="Leaf Feature Extraction (2017)")
