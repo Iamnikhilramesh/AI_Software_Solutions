@@ -3,6 +3,7 @@ import streamlit as st
 import numpy as np
 import streamlit.components.v1 as components
 import smtplib, ssl
+import base64
 
 port = 465  # For SSL
 smtp_server = "smtp.gmail.com"
@@ -11,17 +12,35 @@ receiver_email = "nikhilramesh835@gmail.com"  # Enter receiver address
 password = "Mallamma.1"
 #Settings
 
+#background image 
+main_bg = "sample.jpg"
+main_bg_ext = "jpg"
+
+
+
+st.markdown(
+    f"""
+    <style>
+    .reportview-container {{
+        background: url(data:{main_bg_ext};base64,{base64.b64encode(open(main_bg, "rb").read()).decode()})
+    }}
+   
+    </style>
+    """,
+    unsafe_allow_html=True
+)
+
 #title
 st.title("AI Software Solutions")
 st.markdown(""" ###### _ We Build Fast, To make you smile _""")
 
 
 #Side bar details
-st.sidebar.title('AI Software Solutions')
-st.sidebar.markdown(""" ###### _ We Build Fast, To make you smile _""")
+st.sidebar.image("logo.png",width=220)
 
-selection = st.sidebar.selectbox("Menu", ["Home","Projects","Get In Touch","About Me"])
-st.sidebar.markdown(""" ## Address & Contact Info
+st.sidebar.markdown(""" ## AI Software Solutions
+###### _ We Build Fast, To make you smile _
+### Address & Contact Info
 ### AI Software Solutions
 #### 98 Kärrhöksgatan,55612 Sweden  
 #### _ :email: iamnikhilramesh@gamil.com _
@@ -73,15 +92,13 @@ def home():
     
     team = st.beta_expander("Team ", expanded=True)
     with team:
-        st.text("Team")
-        st.markdown("""#### [CEO](upload://isha.jpeg) [Linkedin](https://www.linkedin.com/in/nikhil-ramesh-5125b7139/) [Github](https://github.com/Iamnikhilramesh) """)
+        st.text("")
+        st.markdown(""" ### Nikhil Ramesh""")
+        st.markdown("""#### _ Founder & CEO _
+        """)
+        st.image("photo.jpeg",width=140)
+        st.markdown("""#### [Linkedin](https://www.linkedin.com/in/nikhil-ramesh-5125b7139/) [Github](https://github.com/Iamnikhilramesh) """)
     
-    events = st.beta_expander("Events ", expanded=True)
-    with events:
-        st.text("Events")
-        
-#Function to display projects
-def projects():
     my_expander_p = st.beta_expander("Some of the Projects I have worked with", expanded=True)
     with my_expander_p:
         a,b = st.beta_columns(2)
@@ -107,11 +124,7 @@ def projects():
         i, j= st.beta_columns(2)
         i.image("bim.jpeg",caption="BIM Class Detection Bot (2021)")
         i.markdown("""[Click here to know more](https://www.youtube.com/)""")
-
-
-
-#Function to display contact details
-def get_in_touch():
+    
     name,email,message,service = mail()
     message = """
     Subject: AI Software Solutions Message
@@ -127,33 +140,14 @@ def get_in_touch():
         except Exception as e:
             print(e)
 
-#Function to display about me
-def about_me():
-
-    #About me
-    my_expander = st.beta_expander("Some of the Clients I have worked with", expanded=True)
-    with my_expander:
-        st.image("agile.png", caption="Agile Health")
-        st.image("aj.png",caption="A J Hospital")
-        st.image("employchain.jpeg",caption="Employchain AB")
-        st.image("isha.jpeg",caption="Isha Foundations")
-        st.image("kmc.jpeg",caption="Kaveri Medical Center")
-        st.image("nccab.png",caption="NCC AB")
-        st.image("luxin.png",caption="Luxin Group AB")
-    images = ['agile.png', 'aj.png', 'employchain.jpeg','isha.jpeg','kmc.jpeg','nccab.png','luxin.png']
-    captions = ['Agile Health','A J Hospital','Employchain AB','Isha Foundations','Kaveri Medical Center','NCC AB','Luxin Group AB']
-
+    events = st.beta_expander("Events ", expanded=True)
+    with events:
+        st.text("There are no upcoming Events")
+    
 
 #to Navigate the functions defined as page.
 try:
-    if selection == "Home":
-        home()
-    elif selection == "Projects":
-        projects()
-    elif selection == "Get In Touch":
-        get_in_touch()
-    elif selection == "About Me":
-        about_me()
+    home()
 except Exception as e:
     print(e)
 
