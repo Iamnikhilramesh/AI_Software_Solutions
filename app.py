@@ -64,7 +64,7 @@ def mail():
 #Function to display home page
 def home():
     st.markdown(""" ## Our Mission and Goal
-    #### _ Passionate team who are ready to take up any challenging task and complete on time _
+    #### _ Passionate team who are ready to take up any challenging task and complete on time, AI should be a benifit for our society and everyone in the society.  _
     """)
     st.markdown(""" ## Our Core Values
     #### _ Passion, Commitment, Positivity, Honesty and Growth _
@@ -106,7 +106,7 @@ def home():
         st.image("photo.jpeg",width=140)
         st.markdown("""#### [Linkedin](https://www.linkedin.com/in/nikhil-ramesh-5125b7139/) [Github](https://github.com/Iamnikhilramesh) """)
     
-    my_expander_p = st.beta_expander("Some of the Projects I have worked with", expanded=False)
+    my_expander_p = st.beta_expander("Some of the Projects We have worked with", expanded=True)
     with my_expander_p:
         a,b = st.beta_columns(2)
         a.image("leaf.jpeg",caption="Leaf Feature Extraction (2017)")
