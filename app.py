@@ -12,23 +12,23 @@ receiver_email = "nikhilramesh835@gmail.com"  # Enter receiver address
 password = "Mallamma.1"
 #Settings
 
-#background image 
-main_bg = "sample.jpg"
-main_bg_ext = "jpg"
+# #background image 
+# main_bg = "sample.jpg"
+# main_bg_ext = "jpg"
 
 
 
-st.markdown(
-    f"""
-    <style>
-    .reportview-container {{
-        background: url(data:{main_bg_ext};base64,{base64.b64encode(open(main_bg, "rb").read()).decode()})
-    }}
+# st.markdown(
+#     f"""
+#     <style>
+#     .reportview-container {{
+#         background: url(data:{main_bg_ext};base64,{base64.b64encode(open(main_bg, "rb").read()).decode()})
+#     }}
    
-    </style>
-    """,
-    unsafe_allow_html=True
-)
+#     </style>
+#     """,
+#     unsafe_allow_html=True
+# )
 
 #title
 st.title("AI Software Solutions")
@@ -84,7 +84,7 @@ def home():
     # with principles:
     #     st.text("Core Principles")
     
-    my_expander = st.beta_expander("Some of the Clients I have worked with", expanded=True)
+    my_expander = st.beta_expander("Some of the Clients We have worked with", expanded=True)
     with my_expander:
         d,e = st.beta_columns(2)
         d.image("isha.jpeg",caption="Isha Foundations")
