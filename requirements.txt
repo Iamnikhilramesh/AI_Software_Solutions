@@ -252,7 +252,6 @@ spyder-kernels==1.8.1
 SQLAlchemy @ file:///opt/concourse/worker/volumes/live/a37d3150-f8e8-4e5d-4ec2-01f3154ae8e6/volume/sqlalchemy_1608243746150/work
 sqlparse==0.3.1
 statsmodels @ file:///opt/concourse/worker/volumes/live/c88b3fa8-c6a0-4ff4-6b2f-464912022a9d/volume/statsmodels_1606925355294/work
-streamlit==0.78.0
 sympy @ file:///opt/concourse/worker/volumes/live/347e855c-d365-447b-5b46-aa042092978f/volume/sympy_1608137682049/work
 tables==3.6.1
 tblib @ file:///tmp/build/80754af9/tblib_1597928476713/work
