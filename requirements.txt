@@ -1,5 +1,3 @@
-smtplib
 streamlit
 ssl
 numpy
-
