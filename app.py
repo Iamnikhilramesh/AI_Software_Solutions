@@ -7,8 +7,8 @@ import base64
 
 port = 465  # For SSL
 smtp_server = "smtp.gmail.com"
-sender_email = "iamnikhilramesh@gmail.com"  # Enter your address
-receiver_email = "nikhilramesh835@gmail.com"  # Enter receiver address
+sender_email = "info@aisoftwaresolutions.io"  # Enter your address
+receiver_email = "aisoftwaresolutions.info@gmail.com"  # Enter receiver address
 password = "Mallamma.1"
 #Settings
 
@@ -43,7 +43,7 @@ st.sidebar.markdown(""" ## AI Software Solutions
 ### Address & Contact Info
 ### AI Software Solutions
 #### 98 Kärrhöksgatan,55612 Sweden  
-#### _ :email: iamnikhilramesh@gamil.com _
+#### _ :email: info@aisoftwaresolutions.io _
 #### _ :phone: +46 - 764439519 _
 #### _ [Instagram](https://www.instagram.com/iamnikhilramesh/)  [Linkedin](https://www.linkedin.com/in/nikhil-ramesh-5125b7139/)  [Github](https://github.com/Iamnikhilramesh) _
 
@@ -64,7 +64,7 @@ def mail():
 #Function to display home page
 def home():
     st.markdown(""" ## Our Mission and Goal
-    #### _ Passionate team who are ready to take up any challenging task and complete on time, AI should be a benifit for our society and everyone in the society.  _
+    #### _ The passionate team who are ready to take up any challenging task and complete it on time, AI should be a benefit for our society and everyone in the society.  _
     """)
     st.markdown(""" ## Our Core Values
     #### _ Passion, Commitment, Positivity, Honesty and Growth _
@@ -92,9 +92,10 @@ def home():
         f,g = st.beta_columns(2)
         f.image("kmc.jpeg",caption="Kaveri Medical Center")
         g.image("luxin.png",caption="Luxin Group AB")
-        a,b,c = st.beta_columns(3)
+        a,b = st.beta_columns(2)
         a.image("agile.png", caption="Agile Health")
         b.image("aj.png",caption="A J Hospital")
+        c,h = st.beta_columns(2)
         c.image("employchain.jpeg",caption="Employchain AB")
     
     team = st.beta_expander("Team ", expanded=True)
