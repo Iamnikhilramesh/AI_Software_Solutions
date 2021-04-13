@@ -70,6 +70,7 @@ def home():
     """)
     st.markdown(""" ## Our Core Principles
     #### _ As we follow a agile workflow, our core principles are Individuals and interactions, Working software, Customer collaboration and Responding to change. _
+    
     """)
     # mission = st.beta_expander("Our Mission and Goal ", expanded=True)
     # with mission:
@@ -82,7 +83,7 @@ def home():
     # principles = st.beta_expander("Core Principles ", expanded=True)
     # with principles:
     #     st.text("Core Principles")
-    
+    st.text("")
     my_expander = st.beta_expander("Some of the Clients We have worked with", expanded=True)
     with my_expander:
         d,e = st.beta_columns(2)
