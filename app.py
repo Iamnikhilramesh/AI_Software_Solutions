@@ -51,8 +51,7 @@ st.sidebar.markdown(""" ## AI Software Solutions
 
 
 def mail():
-    st.header("Need Assistance ???")
-    st.title("Let's work together")
+    st.title("Contact us")
     name,email = st.beta_columns([6,13])
     service, message = st.beta_columns([6,10])
     name = name.text_input("Your Name")
