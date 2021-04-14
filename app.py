@@ -63,7 +63,8 @@ def mail():
 #Function to display home page
 def home():
     st.header("Our Mission and Goal")
-    st.text("The passionate team who are ready to take up any challenging task and complete it on time, AI should be a benefit for our society and everyone in the society.")
+    st.text_area("The passionate team who are ready to take up any challenging task and complete it on time,
+                        AI should be a benefit for our society and everyone in the society.")
     st.markdown(""" ## Our Core Values
     #### _ Passion, Commitment, Positivity, Honesty and Growth _
     """)
