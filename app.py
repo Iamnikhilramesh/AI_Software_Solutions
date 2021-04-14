@@ -63,14 +63,14 @@ def mail():
 #Function to display home page
 def home():
     st.header("Our Mission and Goal")
-    st.subheader("The passionate team who are ready to take up any challenging task and complete it on time, AI should be a benefit for our society and everyone in the society.")
-    st.markdown(""" ## Our Core Values
-    #### _ Passion, Commitment, Positivity, Honesty and Growth _
-    """)
-    st.markdown(""" ## Our Core Principles
-    #### _ As we follow a agile workflow, our core principles are Individuals and interactions, Working software, Customer collaboration and Responding to change. _
+    st.subheader("The passionate team who are ready to take up any challenging task and complete it on time, AI should be a benefit for our society.")
+    # st.markdown(""" ## Our Core Values
+    # #### _ Passion, Commitment, Positivity, Honesty and Growth _
+    # """)
+    # st.markdown(""" ## Our Core Principles
+    # #### _ As we follow a agile workflow, our core principles are Individuals and interactions, Working software, Customer collaboration and Responding to change. _
     
-    """)
+    # """)
     # mission = st.beta_expander("Our Mission and Goal ", expanded=True)
     # with mission:
     #     st.text("Our Mission and Goal")
